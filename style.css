@@ -1,0 +1,168 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css");
+
+body {
+  font-family: 'Chivo', sans-serif;
+  background: #e4fcf4;
+  color: #535353;
+  font-size: 16px;
+  overflow: auto;
+}
+
+h1 {
+  color: #2c3e50;
+  display: inline-block;
+  position: relative;
+}
+
+h1:after {
+  content: '';
+  width: 100%;
+  background: #FE9700;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+h1:hover:after {
+  opacity: 1;
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(5px);
+}
+
+.container {
+  margin: 20px auto;
+  text-align: center;
+  max-width: 800px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid #DD7130;
+}
+
+.footer {
+  margin-top: 40px;
+  border-top: 2px solid #2c3e50;
+  padding-top: 20px;
+  font-size: 12px;
+  letter-spacing: .1em;
+   
+}
+
+.file_selector {
+    margin-top: 10px;
+}
+
+.input_file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#box_wrapper {
+  border: 4px dashed #bfbfb5;
+  padding: 80px;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+progress {
+  background-color: #f3f3f3;
+  border: 0;
+  width: 80%;
+  height: 18px;
+  border-radius: 9px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 9px;
+}
+
+progress::-webkit-progress-value {
+  background: #a5c956;
+  border-radius: 9px;
+}
+
+.snackbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: green;
+  display: none;
+  padding: 10px;
+}
+
+.snackbar_text {
+  width: 100%;
+}
+
+.close {
+  border-right: 2px solid;
+  padding-right: 10px;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.file_name {
+  color: #F9C349;
+}
+
+
+.grid > div {
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(44, 62, 80, 0.36);
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: #fff;
+}
+
+.grid {
+    text-align: center;
+    position: absolute;
+    margin-left: 9%;
+}
+
+.grid > div .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background: #016681;
+}
+
+.grid > div .back {
+    width: 100%;
+    height: 100%;
+    background-color: #2C3E50;
+    position: absolute;
+    border-radius: 100px;
+}
+
+.emoji {
+  width: 50%;
+  height: 50%;
+}
+
+a:link, a:visited {
+  color: #016681;
+  text-decoration: none;
+}
