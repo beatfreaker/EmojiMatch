@@ -1,4 +1,29 @@
 (function () {
+    
+    var easyOpt = {"time": 10, "moves": 30};
+    var mediumOpt = {"time": 5, "moves": 30};
+    var hardOpt = {"time": 2, "moves": 10};
+    var stageOpt = easyOpt;
+    
+    switch (Url.queryString("stage")) {
+        case "easy":
+            stageOpt = easyOpt;
+            document.querySelector(".easy").classList.add("selected");
+            break;
+        case "medium":
+            stageOpt = mediumOpt;
+            document.querySelector(".medium").classList.add("selected");
+            break;
+        case "hard":
+            stageOpt = hardOpt;
+            document.querySelector(".hard").classList.add("selected");
+            break;
+        default:
+            stageOpt = easyOpt;
+            document.querySelector(".easy").classList.add("selected");
+            break;
+    }
+    
 
     var grid = new Match(".grid", {
         templateElm: ".templates > div"
@@ -46,6 +71,22 @@
                 elm2.remove();
             }, 500);
         }, 1000);
+    });
+    
+    grid.on("time", function (time) {
+        var sec = time / 1000;
+        sec = stageOpt.time * 60 - sec;
+        var min = Math.floor(sec / 60);
+        sec = Math.floor(sec - min * 60);
+        sec = (sec < 10 ? "0" : "") + sec;
+        min = (min < 10 ? "0" : "") + min;
+        
+        document.querySelector(".timeleft").innerHTML = min + ":" + sec;
+        
+        if(min == 0 && sec == 0) {
+            alert("You lost.");
+            location.reload();
+        }
     });
 
     grid.start();

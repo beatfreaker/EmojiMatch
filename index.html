@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="theme-color" content="#e4fcf4">
     <meta content='text/html; charset=utf-8' http-equiv='content-type' />
     <title>EmojiMatch</title>
     <link href="http://fonts.googleapis.com/css?family=Chivo" rel="stylesheet" type="text/css" />
@@ -14,6 +15,18 @@
       </section>
       <section class="desc">
         Created by <a href="https://twitter.com/chintsradia">Chintan Radia.</a> Find the source code on <a href="https://github.com/beatfreaker/EmojiMatch/">GITHUB</a>
+      </section>
+      <section class="nav">
+        <ul>
+          <li class="easy"><a href="?stage=easy">Easy</a></li>
+          <li class="medium"><a href="?stage=medium">Medium</a></li>
+          <li class="hard"><a href="?stage=hard">Hard</a></li>
+        </ul>
+      </section>
+      <section class="timer">
+        <span>
+          Time left : <span class="timeleft"></span>
+        </span>
       </section>
       <div class="footer"></div>
       <div class="grid">
@@ -29,6 +42,7 @@
       <span class="snackbar_text"></span>
     </div>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/urljs/1.2.0/url.min.js"></script>
   <script src="//twemoji.maxcdn.com/2/twemoji.min.js"></script>
   <script src="js/emojis.js"></script>
   <script src="js/match.min.js"></script>

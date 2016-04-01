@@ -38,16 +38,18 @@ h1:hover:after {
   max-width: 800px;
 }
 
-a:link, a:visited {
-  text-decoration: none;
-}
 
-a:hover {
+.desc a:hover {
   border-bottom: 1px solid #DD7130;
 }
 
+.desc > a:link, .desc > a:visited {
+  color: #016681;
+  text-decoration: none;
+}
+
 .footer {
-  margin-top: 40px;
+  margin-top: 25px;
   border-top: 2px solid #2c3e50;
   padding-top: 20px;
   font-size: 12px;
@@ -162,7 +164,37 @@ progress::-webkit-progress-value {
   height: 50%;
 }
 
-a:link, a:visited {
-  color: #016681;
+
+.nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.nav li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 10px 30px;
   text-decoration: none;
+}
+
+.timer {
+  margin-top: 20px;
+}
+
+.timer > span {
+  background: skyblue;
+  padding: 10px;
+}
+
+.selected {
+  border-bottom: 2px solid orange;
 }
